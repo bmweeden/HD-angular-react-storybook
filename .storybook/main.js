@@ -1,18 +1,13 @@
 /** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
-  stories: [
-    "../stories/**/*.mdx",
-    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-  ],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
-  ],
-  framework: {
-    name: "@storybook/html-vite",
-    options: {},
-  },
+	stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+	addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@chromatic-com/storybook', '@storybook/addon-interactions'],
+	framework: {
+		name: '@storybook/html-vite',
+		options: {},
+	},
+	core: {
+		builder: '@storybook/builder-vite',
+	},
 };
 export default config;
